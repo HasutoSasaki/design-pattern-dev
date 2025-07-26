@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig to read more about this file */
+    /* Language and Environment */
+    "target": "ES2022", // モダンブラウザをサポートするため、ES2022を使用
+    "module": "commonjs", // Node.js環境での互換性のためCommonJSを使用
+    "lib": [
+      "ES2022",
+      "DOM"
+    ], // ES2022の機能とDOM APIを利用可能に
+    /* Module Resolution */
+    "moduleResolution": "node", // Node.jsのモジュール解決方式を使用
+    "rootDir": "./src", // ソースファイルのルートディレクトリを指定
+    "baseUrl": "./", // 相対パスの基準となるディレクトリ
+    "resolveJsonModule": true, // JSONファイルのインポートを許可
+    /* Emit */
+    "declaration": true, // 型定義ファイル(.d.ts)を生成
+    "sourceMap": true, // デバッグ用のソースマップを生成
+    "outDir": "./dist", // コンパイル済みファイルの出力先
+    "noEmitOnError": true, // エラーがある場合はファイルを出力しない
+    /* Interop Constraints */
+    "isolatedModules": true, // 各ファイルを独立してトランスパイル可能に
+    "allowSyntheticDefaultImports": true, // CommonJSモジュールでのdefaultインポートを許可
+    "esModuleInterop": true, // CommonJSモジュールとESモジュールの相互運用を改善
+    "forceConsistentCasingInFileNames": true, // ファイル名の大文字小文字を厳密にチェック
+    /* Type Checking */
+    "strict": true, // 全ての厳密な型チェックを有効化
+    "noImplicitAny": true, // 暗黙のany型を禁止
+    "strictNullChecks": true, // nullとundefinedの厳密チェック
+    "strictFunctionTypes": true, // 関数型の厳密チェック
+    "noImplicitReturns": true, // 戻り値がない関数のパスを検出
+    "noFallthroughCasesInSwitch": true, // switchのfall-throughを検出
+    "noUnusedLocals": true, // 未使用のローカル変数を検出
+    "noUnusedParameters": true, // 未使用のパラメータを検出
+    "exactOptionalPropertyTypes": true, // オプショナルプロパティの型を厳密に
+    /* Completeness */
+    "skipLibCheck": true // ライブラリファイルの型チェックをスキップ（パフォーマンス向上）
+  },
+  /* Include/Exclude */
+  "include": [
+    "src/**/*" // srcディレクトリ以下の全てのファイルを対象
+  ],
+  "exclude": [
+    "node_modules", // node_modulesは除外
+    "dist", // ビルド出力先は除外
+    "**/*.test.ts", // テストファイルは除外
+    "**/*.spec.ts" // スペックファイルは除外
+  ]
+}
