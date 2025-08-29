@@ -18,4 +18,12 @@ public abstract class Duck {
     public void swim() {
         System.out.println("すべてのカモは浮きます。おとりのカモでも！");
     }
+
+    public void setFlyBehavior(FlyBehavior fb) {
+        flyBehavior = fb;
+    }
+
+    public void setQuackBehavior(QuackBehavior gb) {
+        quackBehavior = gb;
+    }
 }
